@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+import re
+
+# This is the extraction of the date in this format dd-MMM-yyyy
+
+input_string = """Date: Today is 15-Feb-2000
+               """
+
+pattern = r"\d{2}-[A-Za-z]{3}-\d{4}"
+matches = re.search(pattern, input_string)
+
+if matches:
+    Date = matches[0]
+
+    print("Date:", matches)
+else:
+    print("Sorry I am unable to access your information")
