@@ -3,7 +3,9 @@ import re
 
 # This is the extraction of the date in this format dd-MMM-yyyy
 
-input_string = "Date: Today is 15-Feb-2000"
+input_string = """Date: Today is 15-Feb-2000
+                  IP addresses: 192.168.000.111
+               """
 pattern = r"\d{2}-[A-Za-z]{3}-\d{4}"
 matches = re.search(pattern, input_string)
 
